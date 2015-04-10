@@ -1,0 +1,11 @@
+<form action="services" method="POST">
+	<legend>Select Services To Provision:</legend>
+	<div class="form-group">
+		<% services.each do |service| %>
+			<div class="checkbox">
+				<label><input type="checkbox" name="services[<%= service %>]"><%= service %></label>
+			</div>
+		<% end %>
+	<button type="submit" class="btn">Next</button>
+	</div>
+</form>
